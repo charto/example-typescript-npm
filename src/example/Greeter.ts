@@ -13,10 +13,12 @@ export default class Greeter {
 
 export class DeepThought {
 
-	constructor(name: string) {
-		this.result = MeaningOfLife.compute();
+	constructor() {
+		this.question = new MeaningOfLife();
+		this.result = this.question.compute();
 	}
 
+	question: MeaningOfLife;
 	result: number;
 
 }
